@@ -1,0 +1,15 @@
+.toggleButton { 
+  position: absolute;
+  top: 0;
+  right: 2em;
+  border-radius: 100%;
+  background-color:#246DA4 ;
+  color:#BDDCF0 ;
+  width: 80px;
+  height: 80px;
+  border: none;
+  svg:first-of-type {
+    height: 80%;
+    width: 80%;
+  }
+}

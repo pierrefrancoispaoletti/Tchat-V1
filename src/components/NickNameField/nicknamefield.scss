@@ -1,0 +1,22 @@
+.nickNameField {
+  margin: 1.5em 0.8em;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  &__form {
+    width: 100%;
+  }
+  &__input {
+    width: auto;
+    font-size: 1.5em;
+    border: 2px solid #BDDCF0;
+  }
+  &__input:focus {
+    outline: none;
+  }
+}
+

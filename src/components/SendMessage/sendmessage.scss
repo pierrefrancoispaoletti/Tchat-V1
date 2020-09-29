@@ -1,0 +1,25 @@
+.sendMessage {
+  display: flex;
+  flex-direction: row;
+  &__input {
+    height: 100%;
+    padding: 1em;
+    border: none;
+    width: 80%;
+    font-size: 1.5em;
+  }
+  &__button {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    width: 20%;
+  }
+  &__icon {
+    color: #BDDCF0 ;
+    align-self: center;
+    width: 80%;
+    height: 80%;
+  }
+}
