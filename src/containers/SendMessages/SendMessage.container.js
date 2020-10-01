@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 
 import SendMessage from 'src/components/SendMessage/SendMessage';
 
-import { submitMessage, getUserInput } from 'src/actions/gradient';
+import { submitMessage, getUserInput } from 'src/actions/chat';
 
 const mapStateToProps = (state) => ({
   userInput: state.userInput,
-  userPseudo: state.userPseudo,
+  pseudo: state.pseudo,
 });
 
 const mapDispatchToProps = {

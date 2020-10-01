@@ -4,17 +4,27 @@
   align-items: flex-start;
   margin-bottom: 0.8em;
   &__author {
+    padding-left: 0.8em;
     display: inline-block;
-    text-transform: uppercase;
     margin-bottom: 0.8em;
   }
   &__content {
+    text-align: left;
     line-height: 1.2;
-    width: 40%;
-    padding: 0.2em;
-    display: block;
+    padding: 0.8em 1.3em;
+    margin-top: 0.8em;
+    display: inline-block;
     background-color: white;
-    border: 1px solid transparent;
-    border-radius: 15px;
+    border-radius: 1.2rem;
+  }
+  &__content::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-bottom: 10px solid white;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    margin-top: -1.4em;
   }
 }

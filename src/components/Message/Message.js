@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './message.scss';
 
-const Message = ({ userPseudo, message }) => {
+const Message = ({ pseudo, message }) => {
   if (message !== '') {
     return (
       <div className="message">
-        <span className="message__author">{userPseudo}</span>
+        <span className="message__author">{pseudo}</span>
         <p className="message__content">{message}</p>
       </div>
     );

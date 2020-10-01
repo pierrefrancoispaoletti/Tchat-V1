@@ -2,14 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './nicknamefield.scss';
 
-const NickNameField = ({ getUserPseudo, userPseudo }) => (
-  <div className="nickNameField">
-    <input className="nickNameField__input" size="10" placeholder="pseudo" value={userPseudo} onChange={getUserPseudo} />
-  </div>
+const NickNameField = ({ setValue, userPseudo, submitValue }) => (
+  <form
+    className="nickNameField"
+    onSubmit={(e) => {
+      e.preventDefault();
+
+      // eslint-disable-next-line no-unused-expressions
+      (userPseudo !== '' && submitValue());
+    }}
+  >
+    <input
+      className="nickNameField__input"
+      size="10"
+      placeholder="pseudo"
+      value={userPseudo}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  </form>
 );
 
 NickNameField.propTypes = {
-  getUserPseudo: PropTypes.func.isRequired,
+  submitValue: PropTypes.func.isRequired,
+  setValue: PropTypes.func.isRequired,
   userPseudo: PropTypes.string.isRequired,
 };
 

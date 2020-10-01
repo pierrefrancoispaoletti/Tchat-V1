@@ -8,23 +8,30 @@ const SendMessage = ({
   submitMessage,
   getUserInput,
   userInput,
-  userPseudo,
+  pseudo,
 }) => (
-  <form className="sendMessage" onSubmit={(e) => submitMessage(e, userPseudo)}>
+  <form
+    className="sendMessage"
+    onSubmit={(e) => {
+      e.preventDefault();
+      // eslint-disable-next-line no-unused-expressions
+      (userInput !== '' && pseudo !== '') && submitMessage();
+    }}
+  >
     <input
       className="sendMessage__input"
       type="text"
       placeholder="Envoyer un message..."
       name="sendMessage"
       value={userInput}
-      onChange={getUserInput}
+      onChange={(e) => getUserInput(e.target.value)}
     />
     <SendMessageButton><Send className="sendMessage__icon" /></SendMessageButton>
   </form>
 );
 
 SendMessage.propTypes = {
-  userPseudo: PropTypes.string.isRequired,
+  pseudo: PropTypes.string.isRequired,
   submitMessage: PropTypes.func.isRequired,
   getUserInput: PropTypes.func.isRequired,
   userInput: PropTypes.string.isRequired,
